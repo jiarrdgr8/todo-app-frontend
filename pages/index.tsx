@@ -1,8 +1,7 @@
 import Head from 'next/head'
-import { Box, Checkbox, CheckboxGroup, Input } from '@chakra-ui/react'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { DeleteIcon } from '@chakra-ui/icons'
+import TaskList from '@/components/TaskList'
+
 export default function Home() {
   return (
     <>
@@ -14,13 +13,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>TODO</h1>
-        <div className='task-container'>
-          <Checkbox size='md' colorScheme='blue' className='checkbox'>Checkbox</Checkbox>
-          <DeleteIcon color="red"/>
-        </div>
-		
-        
-        <Input className='text-input' placeholder='Write a task' />
+        <TaskList />
+
       </main>
     </>
   )
